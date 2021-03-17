@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+
 import './App.css';
 
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    return (
+    <div className="container">
+      <header>
+        <img source="" alt="logo"/>
+        <select>
+          <option value="0">Select filter:</option>
+          <option value="1">Important</option>
+          <option value="2">Done</option>
+          <option value="3">ascending</option>
+          <option value="4">Descending</option>
+          <option value="5">Schedule</option>    
+        </select>
       </header>
+      <main>
+        <ul>
+          
+          <li><input type="radio" /><input type = "text" value="Eat Currywurst" /><button>Edit</button><button>Del</button></li>
+          <li><input type="radio" /><input type = "text" value="Wash car" /><button>Edit</button><button>Del</button></li>
+          <li><input type="radio" /><input type = "text" value="Butter" /><button>Edit</button><button>Del</button></li>
+          <li><input type="radio" /><input type = "text" value="Get to the Choppa" /><button>Edit</button><button>Del</button></li>
+          
+        </ul>
+      </main>
+      <footer>
+        <input type="text"></input>
+        <button>OK</button>
+      </footer>
     </div>
   );
 }
+
+
 
 export default App;
