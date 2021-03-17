@@ -22,7 +22,7 @@ function App() {
           <li><input type="radio" /><input type = "text" value="Eat Currywurst" /><button>Edit</button><button>Del</button></li>
           <li><input type="radio" /><input type = "text" value="Wash car" /><button>Edit</button><button>Del</button></li>
           <li><input type="radio" /><input type = "text" value="Butter" /><button>Edit</button><button>Del</button></li>
-          <li><input type="radio" /><input type = "text" value="Get to the Choppa" /><button>Edit</button><button>Del</button></li>
+          <li><input type="radio" /><input type = "text" value="Get toooo the Choppa" /><button>Edit</button><button>Del</button></li>
           
         </ul>
       </main>
