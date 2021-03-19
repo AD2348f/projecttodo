@@ -1,24 +1,24 @@
-
+import React, {useState} from 'react';
+import List from './components/List';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
 
 
+
 function App() {
+
+  const [inputText, setInputText] = useState('');
+
+  const [todos, setTodos] = useState([]);   // now the todo's: they will be an array of objects
+
     return (
     <div className="container">
-      <header>
-        <img source="" alt="logo"/>
-        <select>
-          <option value="0">Select filter:</option>
-          <option value="1">Important</option>
-          <option value="2">Done</option>
-          <option value="3">ascending</option>
-          <option value="4">Descending</option>
-          <option value="5">Schedule</option>    
-        </select>
-      </header>
+      <Header />
+      
       <main>
         <ul>
-          
+          <List />
           <li><input type="radio" /><input type = "text" value="Eat Currywurst" /><button>Edit</button><button>Del</button></li>
           <li><input type="radio" /><input type = "text" value="Wash car" /><button>Edit</button><button>Del</button></li>
           <li><input type="radio" /><input type = "text" value="Butter" /><button>Edit</button><button>Del</button></li>
@@ -26,10 +26,12 @@ function App() {
           
         </ul>
       </main>
-      <footer>
-        <input type="text"></input>
-        <button>OK</button>
-      </footer>
+      <Footer 
+      inputText={inputText}
+      setInputText={setInputText}
+      todos={todos}
+      setTodos={setTodos}
+      />
     </div>
   );
 }
