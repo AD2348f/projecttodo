@@ -1,8 +1,6 @@
+import React from 'react'
 
-
-
-
-export default  ({ setInputText, todos, setTodos, inputText, todoList}) => {
+const Footer = ({setInputText}) => {
 
 
 const inputTextHandler = (e) => {
@@ -16,13 +14,13 @@ const submitTodoHandler = (e) => {
         ...todoList,
         { text: inputTextHandler, completed: false, id: Math.random() * 1000}
     ]);
-    // setInputText('');
+   setInputText('');
 }
 
 return (
     <footer>
         <form>
-            <input onChange={inputTextHandler} type="text"  placeholder="new entry..."></input>
+            <input value={inputText} onChange={inputTextHandler} type="text"  placeholder="new entry..."></input>
             <button onClick={submitTodoHandler}><i className="fas fa-plus"></i></button>
         </form>
       </footer>
@@ -31,7 +29,7 @@ return (
 
 }
 
-    
+export default Footer;
 
 
 //Ab hier Fremdcode:
