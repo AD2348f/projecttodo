@@ -1,39 +1,70 @@
+// import React, {useState} from 'react';
+// import List from './components/List';
+// import Header from './components/Header';
+// import Footer from './components/Footer';
+// import './App.css';
 
+
+
+
+// function App() {
+
+//   const [inputText, setInputText] = useState('');
+
+//   const [todos, setTodos] = useState([]);   // now the todo's: they will be an array of objects
+
+//     return (
+//     <div className="container">
+//       <Header />
+      
+      
+//       <Footer 
+//       inputText={inputText}
+//       setInputText={setInputText}
+//       todos={todos}
+//       setTodos={setTodos}
+//       />
+//     </div>
+//   );
+// }
+
+
+
+// export default App;
+
+
+import React, {useState} from 'react';
 import './App.css';
-
+// Importing Components
+import Form from './components/Form';
+import TodoList from './components/TodoList';
 
 function App() {
-    return (
-    <div className="container">
+  //input for the input field next to the add button
+  const [inputText, setInputText] = useState('');
+  // now the todo's: they will be an array of objects
+  const [todos, setTodos] = useState([]);
+  return (
+    <div className="wrapper">
+    <div className="App">
       <header>
-        <img source="" alt="logo"/>
-        <select>
-          <option value="0">Select filter:</option>
-          <option value="1">Important</option>
-          <option value="2">Done</option>
-          <option value="3">ascending</option>
-          <option value="4">Descending</option>
-          <option value="5">Schedule</option>    
-        </select>
+      <h1>Our Todos</h1>
       </header>
-      <main>
-        <ul>
-          
-          <li><input type="radio" /><input type = "text" value="Eat Currywurst" /><button>Edit</button><button>Del</button></li>
-          <li><input type="radio" /><input type = "text" value="Wash car" /><button>Edit</button><button>Del</button></li>
-          <li><input type="radio" /><input type = "text" value="Butter" /><button>Edit</button><button>Del</button></li>
-          <li><input type="radio" /><input type = "text" value="Get toooo the Choppa" /><button>Edit</button><button>Del</button></li>
-          
-        </ul>
-      </main>
-      <footer>
-        <input type="text"></input>
-        <button>OK</button>
-      </footer>
+
+      <TodoList setTodos={setTodos} todos={todos} />
+      <Form inputText={inputText} 
+            todos={todos} 
+            setTodos={setTodos} 
+            setInputText={setInputText} 
+      />
+     
+    </div>
+
     </div>
   );
 }
 
-
-
 export default App;
+
+
+// things to add: filter, important, time stamp instead of random id's? :D
