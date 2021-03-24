@@ -125,7 +125,8 @@
   }
   
   .trash-btn,
-  .complete-btn {
+  .complete-btn,
+  .important-btn {
     background: #9b0281;
     color: black;
     border: none;
@@ -137,6 +138,9 @@
   
   .complete-btn {
     background: rgba(3, 233, 244, 1);
+  }
+  .important-btn {
+    background: rgb(244, 3, 3);
   }
   .todo-item {
     padding: 0rem 0.5rem;
@@ -155,6 +159,10 @@
   .completed {
     text-decoration: line-through;
     opacity: 0.5;
+  }
+
+  .important {
+    color: #f70000;    
   }
   
   /*CUSTOM SELECTOR */

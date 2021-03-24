@@ -55,7 +55,7 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
         e.preventDefault();  //stops from always refreshing the page -> see <button> onClick 
         setTodos([
             ...todos,
-            { text: inputText, completed: false, id: Math.random() * 1000}
+            { text: inputText, important:false, completed: false, id: Math.random() * 1000}
         ]);
         setInputText('');   //resets the state back to zero (press plus button -> input field resets) 
                             //so that you don't have to delete the text inside the input field -> see value in <input>

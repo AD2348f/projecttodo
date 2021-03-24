@@ -48,15 +48,30 @@
             })
             );
         };
+        const importantHandler = () => {
+            setTodos(todos.map((item) => {
+                if(item.id === todo.id) {
+                    return {
+                        ...item, important: !item.important     
+                    };
+                }
+                    return item;     
+            })
+            );
+        };
         return (
             <div className="todo">
-                <li className={`todo-item ${todo.completed ? "completed" : ''}`}>{text}</li>        
+                <li className={`todo-item ${todo.completed ? "completed" : ''}${todo.important ? "important" : ''}`}>{text}</li>        
                     <button onClick={completeHandler} className="complete-btn">
                         <i className="fas fa-check"></i>
+                    </button>
+                    <button onClick={importantHandler} className="important-btn">
+                        <i className="fas fa-exclamation"></i>
                     </button>
                     <button onClick={deleteHandler} className="trash-btn">
                         <i className="fas fa-trash"></i>
                     </button>
+                    
             </div>
         );
     };
