@@ -50,6 +50,7 @@ function App() {
       <header>
       <h1>Our Todos</h1>
       </header>
+
       <TodoList setTodos={setTodos} todos={todos} />
       <Form inputText={inputText} 
             todos={todos} 
@@ -58,6 +59,7 @@ function App() {
       />
      
     </div>
+
     </div>
   );
 }
