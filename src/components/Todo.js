@@ -26,10 +26,6 @@
 //     )
 
 
-
-
-
-
     import React from 'react';
 
     const Todo = ({ text, todo, todos, setTodos }) => {
@@ -60,7 +56,7 @@
             );
         };
         return (
-            <div className="todo">
+            <div className="todo">                
                 <li className={`todo-item ${todo.completed ? "completed" : ''}${todo.important ? "important" : ''}`}>{text}</li>        
                     <button onClick={completeHandler} className="complete-btn">
                         <i className="fas fa-check"></i>
@@ -79,5 +75,4 @@
     export default Todo; 
     
     
-    // <li className={`todo-item ${todo.completed ? "completed" : ''}`}>{text}</li>  was changed from className="todo-item"
-    // -> changed so that the css class can be used
+ 

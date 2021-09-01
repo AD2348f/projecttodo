@@ -1,38 +1,3 @@
-// import React, {useState} from 'react';
-// import List from './components/List';
-// import Header from './components/Header';
-// import Footer from './components/Footer';
-// import './App.css';
-
-
-
-
-// function App() {
-
-//   const [inputText, setInputText] = useState('');
-
-//   const [todos, setTodos] = useState([]);   // now the todo's: they will be an array of objects
-
-//     return (
-//     <div className="container">
-//       <Header />
-      
-      
-//       <Footer 
-//       inputText={inputText}
-//       setInputText={setInputText}
-//       todos={todos}
-//       setTodos={setTodos}
-//       />
-//     </div>
-//   );
-// }
-
-
-
-// export default App;
-
-
 import React, {useEffect, useState} from 'react';
 import './App.css';
 // Importing Components
@@ -88,21 +53,23 @@ const getLocalTodos = () => {
 
   return (
     <div className="wrapper">
-    <div className="App">
-      <header>
-      <h1>Lazor ToDo's</h1>
-      </header>
-      <TodoList filteredTodos={filteredTodos} 
-                setTodos={setTodos} 
+      <div className="App">
+        <header>
+          <h1>My ToDo's</h1>
+        </header>
+        <TodoList filteredTodos={filteredTodos} 
+                  setTodos={setTodos} 
+                  todos={todos} 
+        />
+        <div>
+          <h4>Type a new task here:</h4>
+          <Form inputText={inputText} 
                 todos={todos} 
-      />
-      <Form inputText={inputText} 
-            todos={todos} 
-            setTodos={setTodos} 
-            setInputText={setInputText} 
-            setStatus={setStatus}
-      />
-      
+                setTodos={setTodos} 
+                setInputText={setInputText} 
+                setStatus={setStatus}
+          />   
+        </div>   
       </div>
     </div>
   );

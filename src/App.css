@@ -11,10 +11,8 @@
       justify-content: center;
   }
   .App {
-      margin: 5rem 0;
-      width: 300px;
-      height: 600px;
-      border: 10px solid rgb(9, 209, 192);
+      margin: 5px 0px;      
+      border: 5px solid rgb(9, 209, 192);
       border-radius : 30px;
       box-shadow: 0 0 10px #0ff;
       offset: 10px;
@@ -44,11 +42,8 @@
     animation: neon1 1.5s ease-in-out infinite alternate;
   }
   
-  h1:hover {
-    color: #FF1177;
-    -webkit-animation: none;
-    -moz-animation: none;
-    animation: none;
+  h4 {
+    margin-top: 5rem;
   }
 
   
@@ -56,10 +51,9 @@
 /* end of our extra code */
 
   body {
-    background-image: linear-gradient(120deg, #000000 60%, #02ffea 100%);
+    background-color: #000000;    
     color: white;
-    font-family: "Poppins", sans-serif;
-    min-height: 100vh;
+    font-family: "Poppins", sans-serif;    
   }
   header {
     font-size: 1.5rem;
@@ -72,6 +66,12 @@
     justify-content: center;
     align-items: center;
   }
+
+form-wrapper {
+  display: flex;
+}
+
+
   form input,
   form button {
     padding: 0.5rem;
@@ -88,18 +88,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  form button:hover {
-    /* background: #FF1177;
-    color: white; */
-    
-        background: #03e9f4;
-        color: #050801;
-        box-shadow: 0 0 5px #03e9f4,
-                    0 0 25px #03e9f4,
-                    0 0 50px #03e9f4,
-                    0 0 200px #03e9f4;
-         -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
-  }
+
   .todo-container {
     display: flex;
     justify-content: center;
@@ -115,7 +104,7 @@
     margin: 0.5rem;
     background: rgb(44, 47, 48);
     font-size: 1.5rem;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,9 +112,7 @@
     border-radius: 30px;
     height: 2rem;
   }
-  .filter-todo {
-    /* padding: 1rem; */
-  }
+
   .todo li {
     flex: 1;
     height: 2rem;
